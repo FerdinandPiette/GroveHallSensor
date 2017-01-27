@@ -3,7 +3,7 @@ Hall Sensor Library for Arduino Uno + Grove shield.
 
 [Link to the tested grove module](http://wiki.seeed.cc/Grove-Hall_Sensor/)
 
-#Example
+##Example
 ```c++
 #include <Grove.h>
 #include <GroveHallSensor.h>
@@ -25,26 +25,21 @@ void stateChange() {
 }
 ```
 
-#Documentation
+##Documentation
 
-**`GroveHallSensor(GrovePin pins)` :**
-
+###**`GroveHallSensor(GrovePin pins)`**
 Parameters :
 - pins : Must be a digital socket (GROVE_D2 to GROVE_D8)
 
-**`void initialize()` :**
-
+###**`void initialize()`**
 Initialize the sensor before using it.
 
-**`boolean isMagnetNear()` :**
-
+###**`boolean isMagnetNear()`**
 Return `true` is a magnet is detected.
 
-**`void activateOnChange(void (*callback)())` :**
-
+###**`void activateOnChange(void (*callback)())`**
 Parameters :
 - callback : a function pointer that will be automatically executed when a magnet appears or disappears.
 
-**`void deactivateOnChange()` :**
-
+###**`void deactivateOnChange()`**
 Stop auto executing the callback when a magnet appears or disappears.
