@@ -28,18 +28,23 @@ void stateChange() {
 #Documentation
 
 **`GroveHallSensor(GrovePin pins)` :**
+
 Parameters :
 - pins : Must be a digital socket (GROVE_D2 to GROVE_D8)
 
 **`void initialize()` :**
+
 Initialize the sensor before using it.
 
 **`boolean isMagnetNear()` :**
+
 Return `true` is a magnet is detected.
 
 **`void activateOnChange(void (*callback)())` :**
+
 Parameters :
 - callback : a function pointer that will be automatically executed when a magnet appears or disappears.
 
 **`void deactivateOnChange()` :**
+
 Stop auto executing the callback when a magnet appears or disappears.
