@@ -5,13 +5,12 @@ Hall Sensor Library for Arduino Uno + Grove shield.
 
 ##Example
 ```c++
-#include <Grove.h>
 #include <GroveHallSensor.h>
 
-GroveHallSensor hallSensor(GROVE_D2);
+GroveHallSensor hallSensor;
 
 void setup() {
-  hallSensor.initialize();
+  hallSensor.initialize(GROVE_D2);
   hallSensor.activateOnChange(stateChange);
   Serial.begin(9200);
 }
@@ -27,12 +26,11 @@ void stateChange() {
 
 ##Documentation
 
-###`GroveHallSensor(GrovePin pins)`
+###`void initialize(GrovePin pins)`
+Initialize the sensor before using it.
+
 Parameters:
 - `pins`: Must be a digital socket (GROVE_D2 to GROVE_D8)
-
-###`void initialize()`
-Initialize the sensor before using it.
 
 ###`boolean isMagnetNear()`
 Return `true` is a magnet is detected.

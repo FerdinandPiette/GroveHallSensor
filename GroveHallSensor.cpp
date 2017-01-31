@@ -1,11 +1,11 @@
 #include "GroveHallSensor.h"
 
-GroveHallSensor::GroveHallSensor(GrovePin pins) {
-	this->_pin = pins.pin1;
+GroveHallSensor::GroveHallSensor() {
 	this->_state = false;
 }
 
-void GroveHallSensor::initialize() {	
+void GroveHallSensor::initialize(GrovePin pins) {	
+	this->_pin = pins.pin1;
 	pinMode(this->_pin, INPUT_PULLUP);
 }
 

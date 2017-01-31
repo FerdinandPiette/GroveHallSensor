@@ -11,9 +11,9 @@ class GroveHallSensor {
 		void (*_callback)();
 		
 	public:
-		GroveHallSensor(GrovePin pins);
+		GroveHallSensor();
 		virtual ~GroveHallSensor() {};
-		void initialize();
+		void initialize(GrovePin pins);
 		boolean isMagnetNear();
 		void activateOnChange(void (*callback)());
 		void deactivateOnChange();
